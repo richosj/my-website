@@ -8,13 +8,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run build && gh-pages -d out"
+    "deploy": "npm run build && next export && gh-pages -d out"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.2",
+    "@mui/material": "^6.1.2",
     "my-website": "file:",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sass": "^1.79.4"
   },
   "devDependencies": {
     "@types/node": "^20",

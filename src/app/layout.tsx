@@ -1,11 +1,31 @@
-// src/app/layout.tsx
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+import type { Metadata } from "next";
+
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+
+import "./globals.scss";
+
+
+export const metadata: Metadata = {
+  title: "제목",
+  description: "설명글",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html>
-      <head>
-        <title>My Website</title>
-      </head>
-      <body>{children}</body>
+    <html lang="ko">
+      <body
+        className="body"
+      >
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
